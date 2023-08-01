@@ -92,7 +92,7 @@ function mostrarAcordes() {
         var currentNote = ListAcordesDistinct[i];
 
         var imgElement = document.createElement("img");
-        imgElement.src = "https://github.com/jmLadino/AcordesDeAlabanza/blob/main/FullChords/" + currentNote + ".png"
+        imgElement.src = "https://jmladino.github.io/AcordesDeAlabanza/FullChords/" + currentNote + ".png"
         imgElement.alt = currentNote;
         //imgElement.style.maxWidth = "100px";
         imgElement.style.width = "120px";
