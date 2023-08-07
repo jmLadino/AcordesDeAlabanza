@@ -21,7 +21,7 @@
 
 .syllable .note {
     position: absolute;
-    top: -30px; /* Ajusta esta propiedad para controlar la distancia vertical de la etiqueta */
+    top: -26px; /* Ajusta esta propiedad para controlar la distancia vertical de la etiqueta */
     left: 0;
     background-color: #007bff;
     color: #fff;
