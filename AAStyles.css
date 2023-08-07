@@ -60,6 +60,14 @@
     font-size: 20px;
 }
 
+/* Estilos para centrar el contenido verticalmente y horizontalmente */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+  }
+
 /*
 body {
     margin: 20;
