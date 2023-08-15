@@ -129,6 +129,10 @@ body {
       padding: 20px;
       border: 1px solid #ccc;
       background-color:white;
+	  
+		font-family: Arial;
+		padding-left: 20px;
+		font-size: 20px;	  
     }
     .hidden {
       display: none;
