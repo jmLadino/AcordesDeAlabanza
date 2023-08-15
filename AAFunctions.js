@@ -133,13 +133,13 @@ const closeModalButton = document.getElementById("closeModalButton");
 const imageContainer = document.getElementById("imageContainer");
 
 btnAcordes.addEventListener("click", () => {
-  modalOverlay.style.display = "flex";
-  
 	if (imageContainer.style.display === "none") {
 		imageContainer.style.display = "block";
 	} else {
 		imageContainer.style.display = "none";
 	}  
+	
+  modalOverlay.style.display = "flex";
 });
 
 closeModalButton.addEventListener("click", function() {
