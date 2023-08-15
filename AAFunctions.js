@@ -111,12 +111,37 @@ function getDistinctValues(array) {
 // Llamada a la función al cargar la página
 document.addEventListener("DOMContentLoaded", onLoad);		
 
-const DIVAcordes = document.getElementById("DIVAcordes");
+const DIVLetra = document.getElementById("DIVLetra");
+const DIVGuitarra = document.getElementById("DIVGuitarra");
+const btnGuitarra = document.getElementById("btnGuitarra");
+const btnLetra = document.getElementById("btnLetra");
+
+btnGuitarra.addEventListener("click", function() {
+  DIVLetra.classList.add("hidden");
+  DIVGuitarra.classList.remove("hidden");
+});
+
+btnLetra.addEventListener("click", function() {
+  DIVGuitarra.classList.add("hidden");
+  DIVLetra.classList.remove("hidden");
+});
+
+
+const btnAcordes = document.getElementById("btnAcordes");
+const modalOverlay = document.getElementById("modalOverlay");
+const closeModalButton = document.getElementById("closeModalButton");
 const imageContainer = document.getElementById("imageContainer");
-DIVAcordes.addEventListener("click", () => {
+
+btnAcordes.addEventListener("click", () => {
+  modalOverlay.style.display = "flex";
+  
 	if (imageContainer.style.display === "none") {
 		imageContainer.style.display = "block";
 	} else {
 		imageContainer.style.display = "none";
-	}
+	}  
+});
+
+closeModalButton.addEventListener("click", function() {
+  modalOverlay.style.display = "none";
 });
