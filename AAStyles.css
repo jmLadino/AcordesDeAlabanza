@@ -16,14 +16,14 @@
 .syllable {
     position: relative;
     display: inline-block;
-    color: blue;
+    color: #bc8100;
 }
 
 .syllable .note {
     position: absolute;
     top: -26px; /* Ajusta esta propiedad para controlar la distancia vertical de la etiqueta */
     left: 0;
-    background-color: #007bff;
+    background-color: #bc8100;
     color: #fff;
     padding: 4px;
     padding-bottom: 2px;
@@ -35,7 +35,7 @@
 }
 
 .blue-button {
-    background-color: #007bff;
+    background-color: #8b3c01;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -146,7 +146,6 @@ body {
       flex-direction: column;
     }
     .floating-right button {
-      background-color: #007bff;
       color: #fff;
       border: none;
       padding: 5px 10px;
