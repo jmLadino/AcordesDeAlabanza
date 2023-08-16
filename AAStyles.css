@@ -47,11 +47,11 @@
 }
 
 .blue-button:hover {
-    background-color: #0056b3;
+    background-color: #bc8100;
 }
 
 .blue-button:active {
-    background-color: #003c80;
+    background-color: #bc8100;
 }
 
 #container {
