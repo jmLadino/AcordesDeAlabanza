@@ -21,7 +21,7 @@
 
 .syllable .note {
     position: absolute;
-    top: -26px; /* Ajusta esta propiedad para controlar la distancia vertical de la etiqueta */
+    top: -18px;
     left: 0;
     background-color: #bc8100;
     color: #fff;
@@ -32,6 +32,10 @@
     font-size: 14px;
     text-align: center;
     white-space: nowrap;
+	
+      display: flex;
+      align-items: center;
+      justify-content: center;	
 }
 
 .blue-button {
@@ -214,4 +218,8 @@ h3.post-title {
     margin: 0;
     font-weight: bold;
     font-size: 24px;
-}	
+}
+
+.increased-line-height {
+	line-height: 2.0; 
+}
