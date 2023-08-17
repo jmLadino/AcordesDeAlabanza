@@ -25,6 +25,33 @@ function transposeNotes(semiTones) {
             noteElement.textContent = TonalidadLatina[transposedIndex] + Nota2;
         }
     }
+	
+      document.querySelectorAll(".chord").forEach(function(element) {
+		debugger;
+		var currentNote = element.dataset.tabsaurus;
+		var NotaBase = currentNote.replace("m", "").replace("7", "");
+		var Nota2 = currentNote.replace(NotaBase, ""); // solo queda el 7 y m
+
+        if (TonalidadAmericana.includes(NotaBase)) {
+            var currentIndex = TonalidadAmericana.indexOf(NotaBase);
+            var transposedIndex = (currentIndex + semiTones + TonalidadAmericana.length) % TonalidadAmericana.length;
+            var NuevaNota = TonalidadAmericana[transposedIndex] + Nota2;
+			var LinkNuevaNota = "https://jmladino.github.io/AcordesDeAlabanza/FullChords/" + NuevaNota + ".png";
+			
+			element.dataset.tabsaurus = NuevaNota;
+			element.querySelector(".chord-tooltip img").src = LinkNuevaNota.replace(new RegExp("#", 'g'), "Sost");
+        }
+        else {
+            var currentIndex = TonalidadLatina.indexOf(NotaBase);
+            var transposedIndex = (currentIndex + semiTones + TonalidadLatina.length) % TonalidadLatina.length;
+            var NuevaNota = TonalidadLatina[transposedIndex] + Nota2;
+			var LinkNuevaNota = "https://jmladino.github.io/AcordesDeAlabanza/FullChords/" + NuevaNota + ".png";
+			
+			element.dataset.tabsaurus = NuevaNota;
+			element.querySelector(".chord-tooltip img").src = LinkNuevaNota.replace(new RegExp("#", 'g'), "Sost");            
+        }		
+      });
+	  
     mostrarAcordes();
 }
 
