@@ -221,6 +221,10 @@ h3.post-title {
     font-size: 24px;
 }
 
-.increased-line-height {
+.InterlineadoGuitarra {
 	line-height: 2.0; 
+}
+
+.InterlineadoLetra {
+	line-height: 1.0; 
 }
