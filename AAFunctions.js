@@ -18,44 +18,27 @@ function transposeNotes(semiTones) {
             var currentIndex = TonalidadAmericana.indexOf(NotaBase);
             var transposedIndex = (currentIndex + semiTones + TonalidadAmericana.length) % TonalidadAmericana.length;
             noteElement.textContent = TonalidadAmericana[transposedIndex] + Nota2;
+
+				var LinkNuevaNota = "https://jmladino.github.io/AcordesDeAlabanza/FullChords/" + noteElement.textContent + ".png";
+				noteElement.parentNode.parentNode.dataset.tabsaurus = noteElement.textContent;
+				noteElement.parentNode.parentNode.querySelector(".chord-tooltip img").src = LinkNuevaNota.replace(new RegExp("#", 'g'), "Sost");
         }
         else {
             var currentIndex = TonalidadLatina.indexOf(NotaBase);
             var transposedIndex = (currentIndex + semiTones + TonalidadLatina.length) % TonalidadLatina.length;
             noteElement.textContent = TonalidadLatina[transposedIndex] + Nota2;
+			
+				var LinkNuevaNota = "https://jmladino.github.io/AcordesDeAlabanza/FullChords/" + noteElement.textContent + ".png";
+				noteElement.parentNode.parentNode.dataset.tabsaurus = noteElement.textContent;
+				noteElement.parentNode.parentNode.querySelector(".chord-tooltip img").src = LinkNuevaNota.replace(new RegExp("#", 'g'), "Sost");			
         }
     }
-	
-      document.querySelectorAll(".chord").forEach(function(element) {
-		debugger;
-		var currentNote = element.dataset.tabsaurus;
-		var NotaBase = currentNote.replace("m", "").replace("7", "");
-		var Nota2 = currentNote.replace(NotaBase, ""); // solo queda el 7 y m
 
-        if (TonalidadAmericana.includes(NotaBase)) {
-            var currentIndex = TonalidadAmericana.indexOf(NotaBase);
-            var transposedIndex = (currentIndex + semiTones + TonalidadAmericana.length) % TonalidadAmericana.length;
-            var NuevaNota = TonalidadAmericana[transposedIndex] + Nota2;
-			var LinkNuevaNota = "https://jmladino.github.io/AcordesDeAlabanza/FullChords/" + NuevaNota + ".png";
-			
-			element.dataset.tabsaurus = NuevaNota;
-			element.querySelector(".chord-tooltip img").src = LinkNuevaNota.replace(new RegExp("#", 'g'), "Sost");
-        }
-        else {
-            var currentIndex = TonalidadLatina.indexOf(NotaBase);
-            var transposedIndex = (currentIndex + semiTones + TonalidadLatina.length) % TonalidadLatina.length;
-            var NuevaNota = TonalidadLatina[transposedIndex] + Nota2;
-			var LinkNuevaNota = "https://jmladino.github.io/AcordesDeAlabanza/FullChords/" + NuevaNota + ".png";
-			
-			element.dataset.tabsaurus = NuevaNota;
-			element.querySelector(".chord-tooltip img").src = LinkNuevaNota.replace(new RegExp("#", 'g'), "Sost");            
-        }		
-      });
-	  
     mostrarAcordes();
 }
 
 function convertirNotacion() {
+	debugger;
     for (var i = 0; i < syllables.length; i++) {
         var noteElement = syllables[i].querySelector(".note");
         var currentNote = noteElement.textContent;
@@ -66,6 +49,10 @@ function convertirNotacion() {
             if (posicion !== -1) {
                 noteElement.textContent = escalaAmericana[posicion];
                 noteElement.setAttribute("data-notation", "Americana");
+				
+				var LinkNuevaNota = "https://jmladino.github.io/AcordesDeAlabanza/FullChords/" + noteElement.textContent + ".png";
+				noteElement.parentNode.parentNode.dataset.tabsaurus = noteElement.textContent;
+				noteElement.parentNode.parentNode.querySelector(".chord-tooltip img").src = LinkNuevaNota.replace(new RegExp("#", 'g'), "Sost");
             }
         }
         else {
@@ -73,9 +60,16 @@ function convertirNotacion() {
             if (posicion !== -1) {
                 noteElement.textContent = escalaLatina[posicion];
                 noteElement.setAttribute("data-notation", "Latina");
+				
+				var LinkNuevaNota = "https://jmladino.github.io/AcordesDeAlabanza/FullChords/" + noteElement.textContent + ".png";
+				noteElement.parentNode.parentNode.dataset.tabsaurus = noteElement.textContent;
+				noteElement.parentNode.parentNode.querySelector(".chord-tooltip img").src = LinkNuevaNota.replace(new RegExp("#", 'g'), "Sost");				
             }
         }
     }
+	
+	  
+	  
     mostrarAcordes();
 }
 
@@ -98,6 +92,10 @@ function TonalidadInicial() {
         var noteElement = SyllablesActual[i].querySelector(".note");
         noteElement.textContent = AcordesOriginales[i];
         noteElement.setAttribute("data-notation", "Latina");
+		
+		var LinkNuevaNota = "https://jmladino.github.io/AcordesDeAlabanza/FullChords/" + noteElement.textContent + ".png";
+		noteElement.parentNode.parentNode.dataset.tabsaurus = noteElement.textContent;
+		noteElement.parentNode.parentNode.querySelector(".chord-tooltip img").src = LinkNuevaNota.replace(new RegExp("#", 'g'), "Sost");
     }
     mostrarAcordes();
 }
