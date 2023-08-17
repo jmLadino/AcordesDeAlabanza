@@ -120,6 +120,37 @@ body {
     }
 	
 	
+    .tooltipPrevNext {
+      position: relative;
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+    }
+    .tooltipPrevNext-content {
+	font-family: Arial;
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 5px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 14px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s, visibility 0.2s;
+	  width: 200px; /* Ajusta el ancho del tooltip */
+	  text-align:center;
+    }
+    .tooltipPrevNext:hover .tooltipPrevNext-content {
+      opacity: 1;
+      visibility: visible;
+    }
+
+	
+	
+	
 	/* ALTERNAR VISIBILIDAD DE LOS DIVS */
     .div-container {
       display: flex;
