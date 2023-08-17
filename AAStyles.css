@@ -222,9 +222,11 @@ h3.post-title {
 }
 
 .InterlineadoGuitarra {
-	line-height: 2.0; 
+	line-height: 2.0;
+	margin-bottom: 40px;
 }
 
 .InterlineadoLetra {
-	line-height: 1.0; 
+	line-height: 1.0;
+	margin-bottom: 40px;
 }
