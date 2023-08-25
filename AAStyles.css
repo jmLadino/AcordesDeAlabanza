@@ -257,3 +257,8 @@ body {
 		height:140px;
 		width:100px;
 	}
+	
+	html .post-body img {
+    box-sizing: border-box;
+    /* max-width: 100%; */
+	}
