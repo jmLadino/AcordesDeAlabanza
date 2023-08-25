@@ -252,12 +252,6 @@ body {
       display: block;
     }
 	
-	img
-	{
-		height:140px;
-		width:100px;
-	}
-	
 	html .post-body img {
 	    box-sizing: border-box !important;
 	    max-width: 100px !important; /*este valor es incorrecto, pero sirve asi, para sobreescribir el valor original */
