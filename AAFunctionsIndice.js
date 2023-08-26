@@ -13,7 +13,7 @@
 			
 				if (letra.toUpperCase() === "TODOS")
 				{
-					elemento.parentNode.style.display = 'block';
+					elemento.parentNode.parentNode.style.display = 'block';
 				}
 				else
 				{
@@ -26,9 +26,9 @@
 					if (primeraLetra == "¿") primeraLetra = elemento.textContent.charAt(1).toUpperCase();;
 					
 					if (primeraLetra === letra.toUpperCase()) {
-						elemento.parentNode.style.display = 'block';
+						elemento.parentNode.parentNode.style.display = 'block';
 					} else {
-						elemento.parentNode.style.display = 'none';
+						elemento.parentNode.parentNode.style.display = 'none';
 					}
 				}
             });
@@ -41,9 +41,9 @@
             elementos.forEach(function(elemento) {
                 const contenido = elemento.textContent.toLowerCase();
                 if (contenido.includes(texto)) {
-                    elemento.parentNode.style.display = 'block';
+                    elemento.parentNode.parentNode.style.display = 'block';
                 } else {
-                    elemento.parentNode.style.display = 'none';
+                    elemento.parentNode.parentNode.style.display = 'none';
                 }
             });
         });
