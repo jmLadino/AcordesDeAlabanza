@@ -92,7 +92,7 @@
 		
 		.linkmenu {
 			text-decoration: none;
-			color: #fff;
+			color: #fff !important;
 		}
 		
         /* Estilos para el encabezado de búsqueda */
