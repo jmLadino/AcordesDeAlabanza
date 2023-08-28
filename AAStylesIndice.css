@@ -12,8 +12,8 @@
         }
 
         .item {
-            width: 180px;
-            height: 70px;
+            /* width: 180px; */
+            height: 50px;
             background-color: #c28b00;
             color: #fff;
             border-radius: 5px;
@@ -33,13 +33,13 @@
         /* Estilos para la sección de texto arriba */
         .texto-arriba {
             text-align: left;
-            font-size: 15px;
+            font-size: 12px;
         }
 
         /* Estilos para la sección de texto centrado */
         .texto-centro {
             text-align: center;
-            font-size: 18px;
+            font-size: 14px;
             flex: 1;
         }
 		
