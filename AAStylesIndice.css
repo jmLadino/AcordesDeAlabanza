@@ -45,12 +45,11 @@
 		
         /* Estilos para la sección de íconos abajo */
         .iconos-abajo {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-			text-align: right;
-            margin-top: -30px;
-        }		
+		    position: relative;
+		    bottom: 5px;
+		    right: 5px;
+			text-align:right;
+        }			
 
         /* Estilos para los íconos individuales */
         .icono {
