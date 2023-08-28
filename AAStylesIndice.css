@@ -12,8 +12,8 @@
         }
 
         .item {
-            /* width: 180px; */
-            height: 50px;
+            max-width: 160px;
+			max-height: 70px;
             background-color: #c28b00;
             color: #fff;
             border-radius: 5px;
@@ -46,8 +46,6 @@
         /* Estilos para la sección de íconos abajo */
         .iconos-abajo {
 		    position: relative;
-		    bottom: 5px;
-		    right: 5px;
 			text-align:right;
         }			
 
