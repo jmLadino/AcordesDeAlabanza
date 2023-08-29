@@ -14,6 +14,7 @@
 				if (letra.toUpperCase() === "TODOS")
 				{
 					elemento.parentNode.parentNode.style.display = 'block';
+					visibleSection(elemento.parentNode.parentNode.parentNode.id, true);
 				}
 				else
 				{
@@ -27,6 +28,7 @@
 					
 					if (primeraLetra === letra.toUpperCase()) {
 						elemento.parentNode.parentNode.style.display = 'block';
+						visibleSection(elemento.parentNode.parentNode.parentNode.id, true);
 					} else {
 						elemento.parentNode.parentNode.style.display = 'none';
 					}
@@ -42,6 +44,7 @@
                 const contenido = elemento.textContent.toLowerCase();
                 if (contenido.includes(texto)) {
                     elemento.parentNode.parentNode.style.display = 'block';
+					visibleSection(elemento.parentNode.parentNode.parentNode.id, true);
                 } else {
                     elemento.parentNode.parentNode.style.display = 'none';
                 }
@@ -57,4 +60,19 @@
             } else {
                 elemento.style.display = "block";
             }
+        }
+		
+        // Función para setear la visibilidad de la sección
+        function visibleSection(id, visible) {
+			var strSeccion = "";
+			if (id == "indice1")
+				strSeccion = "seccion1";
+			else if (id == "indice2")
+				strSeccion = "seccion2";
+			else if (id == "indice3")
+				strSeccion = "seccion3";
+			
+			var elemento = document.getElementById(strSeccion);
+			var strVisible = (visible ? "block" : "none");
+			elemento.style.display = strVisible;
         }		
