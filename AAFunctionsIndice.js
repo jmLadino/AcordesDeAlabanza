@@ -71,6 +71,8 @@
 				strSeccion = "seccion2";
 			else if (id == "indice3")
 				strSeccion = "seccion3";
+			else if (id == "indice4")
+				strSeccion = "seccion4";
 			
 			var elemento = document.getElementById(strSeccion);
 			var strVisible = (visible ? "block" : "none");
